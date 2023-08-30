@@ -1,0 +1,341 @@
+
+.button {
+  border-radius: 4.5px;
+  cursor: pointer;
+  outline: grey;
+  color: #fff;
+  border-color: burlywood;
+
+  
+}
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.logo-1{
+  background-color: darkblue;
+  color:white;
+  border-radius: 1px solid;
+  font-weight: bold;
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+html {
+  color: #ffffff;
+  font-size: 1em;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,800);
+
+/* No padding on the site*/
+*,html,body,div,dl,dt,dd,ul,ol,li,h2,h3,h5,h6,pre,form,label,fieldset,input,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+}
+article,aside,figure,footer,header,hgroup,nav,section {
+  display: block;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Site background */
+body {
+  background: #ffffff;
+  color: #374147;
+  font: 14px "Open Sans",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  margin: auto;
+}
+
+h2{
+  font: 16px "Open Sans",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font: 14px "Open Sans",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin-top:3px;
+}
+/* Styling of the section */
+section{
+  max-width: 1200px;
+  min-height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headersection {
+    max-width: 1200px;
+    max-height: 96px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+}
+/* Styling of complementary banner */
+.usp-banner {
+    display: block;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    font: 14px "Open Sans",Helvetica,Arial,sans-serif;
+    line-height: 1.5rem;
+    color: #374147;
+    background: #fff;
+    height: 30px;
+ }
+ @media screen and (max-width: 600px) {
+  .usp-banner{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .usp-banner{
+    display: none;
+  }
+}
+.uspBannerList ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+.uspBannerList li{
+  list-style-type: none;
+  margin-right:  2.5%;
+  margin-left: 2.5%;
+  width: 45%;
+  float: left;
+  height: auto;
+}
+
+
+/*Styling of searchbar */
+.search {
+  width: 35%;
+  position: relative;
+  display: flex;
+  left: 12%;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
+  .search{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search{
+    width: 60%;
+  }
+}
+.searchTerm {
+  width: 300px;
+  border: 3px solid #fff;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #374147;
+}
+
+@media screen and (max-width: 600px) {
+  .searchTerm{
+    width: 100px;
+  }
+}
+.searchTerm:focus{
+  color: #374147;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #fff;
+  background: #57bdfc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Styling of the header */
+.header {
+  padding: 35px;
+  text-align: center;
+  background: #57bdfc;
+  color: white;
+}
+
+
+.logo {
+    height: 96px;
+    float: left;
+    position: relative;
+    margin-top: -15px; <--- adjust according to your need..
+}
+@media screen and (max-width: 600px) {
+  .logo{
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo{
+    margin-left: 5px;
+  }
+}
+.font{
+  font-size: 20px;
+  width: 60%;
+  height: 36px;
+  border: 1px solid #fff;
+  background: rgb(27, 129, 142);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+.open{
+  font-size: 20px;
+  width: 1000px;
+  height: 36px;
+  border: 1px solid #fff;
+  background: rgb(27, 129, 142);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
