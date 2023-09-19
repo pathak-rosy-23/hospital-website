@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+   <title>Hospital Website-Medilab</title>
+    <!---custom css link---->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>    
+</head>
+
+
+
+<div id="consultform">
+  Fill out the form below to request a free consultation. We will contact you shortly!<br><br>
+
+  <form action="/form/consultationform.php" method="post">
+  <strong>Name</strong><br>
+    <div class="col-md-6">
+      <input type="text" name="firstname" required placeholder="First Name">
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="lastname" required placeholder="Last Name"><br><br>
+    </div>
+
+  <strong>Email</strong><br>
+  <div class="col-md-12">
+    <input type="text" name="email" id="email" required placeholder="example@example.com"><br><br>
+  </div>
+
+  <strong>Phone Number</strong><br>
+  <div class="col-md-3">
+    <input type="text" name="areacode" required placeholder="Area Code">
+  </div>
+  <div class="col-md-9">
+    <input type="text" name="phonenumber" required placeholder="Phone Number"><br><br>
+  </div>
+
+
+  <strong>Service of Interest</strong><br>
+    <div class="columnwrapper">
+    <div class="col-md-6">
+        <input class="radio" type="radio" name="servicesofinterest" value="laser-hair"> Laser Hair<br>
+        <input class="radio" type="radio" name="servicesofinterest" value="photo-facial"> Photo Facial<br>
+        <input class="radio" type="radio" name="servicesofinterest" value="acne-treatment"> Acne Treatment<br>
+        <input class="radio" type="radio" name="servicesofinterest" value="rosacea"> Rosacea<br>
+    </div>
+    <div class="col-md-6">
+        <input class="radio" type="radio" name="servicesofinterest" value="body-countouring"> Body Contouring<br>
+        <input class="radio" type="radio" name="servicesofinterest" value="veleshape"> VeleShape<br>
+        <input class="radio" type="radio" name="servicesofinterest" value="age-brown-spots"> Age/Brown Spots<br>
+        <input class="radio" type="radio" name="servicesofinterest" value="other"> Other<br><br>
+    </div>
+  </div>
+
+    <strong>Question or Comment</strong>
+    <textarea name="comment" class="col-md-12">
+    </textarea>
+    <br><br>
+    <img id="captcha" src="/form//securimage/securimage_show.php" alt="CAPTCHA Image" />
+  <br><br>
+	 <input class="col-md-6" type="text" name="captcha_code" size="10" maxlength="6" required/>
+   <br><br>
+	  <a href="#" onclick="document.getElementById('captcha').src = '/form/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+    <br>
+
+  <input id="consultformsubmit" type="submit" value="submit" name="submit">
+  </form>
+</div>
