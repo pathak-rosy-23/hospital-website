@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+   <title>Hospital Website-Medilab</title>
+    <!---custom css link---->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<form action="/action_page.php">
+    <h2> Appointment Details</h2>
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="text" placeholder="Full Name" name="usrnm">
+    </div>
+  
+    <div class="input-container">
+      <i class="fa fa-envelope icon"></i>
+      <input class="input-field" type="text" placeholder="Email" name="email">
+    </div>
+  
+    <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="Contact" placeholder="Contact No." name="Contact No.">
+      </div>
+      <label for="appointment_for">Appointment for*:</label>
+      <select id="appointment_for" name="appointment_for" required>
+        <option value="">Select</option>
+        <option value="">Cardiology</option>
+        <option value="">Neurology & Neurosurgery</option>
+        <option value="">Obestretric & Gynaecology</option>
+        <option value="">Dermatology</option>
+        <option value="">Nephrology & Urology</option>
+        <option value="">Orthopedics</option>
+        <option value="">Oncology</option>
+        <option value="">ENT</option>
+        <option value="">Dental</option>
+      </select>
+      <br>
+      <br>
+      <label for="appointment_description">Appointment Description*:</label>
+      <textarea id="appointment_description" name="appointment_description" placeholder="       "></textarea>
+      <br>
+      <br>
+      <label for="date">Date*:</label>
+      <input type="date" name="date" value="" required></input>
+      <br>
+      <br>
+      <label for="time">Time*:</label>
+      <input type="time" name="time" value="" required></input>
+      
+      <input type="radio" name="duration" value="morning" checked> Morning
+      <input type="radio" name="duration" value="night">Evening
+    </fieldset>
+    <br>
+    <br>
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    <button type="submit" class="btn">Book Appointment</button>
+  </form
